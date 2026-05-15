@@ -8,7 +8,7 @@ COPY .mvn .mvn
 COPY src src
 
 # Build the Spring Boot application
-RUN ./mvnw -DskipTests package -DskipTransferProgress
+RUN sh ./mvnw -DskipTests package -DskipTransferProgress
 
 # Runtime stage
 FROM eclipse-temurin:21-jre
